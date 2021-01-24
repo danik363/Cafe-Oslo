@@ -1,0 +1,258 @@
+/*Estilos generales*/
+*{
+	box-sizing: border-box;
+	
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+p{	
+
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	color: #f5f0ed;
+}
+
+.background{
+	position: relative;
+	background-image: url('img/Fondo1.jpg');
+	background-position: initial;
+	background-size: cover;
+	height: 100vh;
+}
+
+
+/* Estilos de cabezera*/
+header .container{
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+#button-menu{
+	padding: 14px;
+
+	border-radius: 5px;
+	color: #fff;
+	background-color: #d03b40;
+}
+.navigation{
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 2s;
+	background-color: #d03b40;
+	position: absolute;
+	top: 20vh;
+	right: 0;
+	left: 0;
+}
+.js .navigation.menu-desplegado{
+	max-height: 200px;
+}
+.navigation .menu{
+	margin: 2vh 0;
+}
+.navigation .menu ul li{
+	padding: 3vh 0;
+	width: 100vw;
+	text-align: center;
+	border-bottom: 1px solid #f5f0ed;
+}
+.navigation .menu ul li:last-child{
+		border-bottom: none;
+}
+.navigation .menu ul li a{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*Estilos de Hero */
+.hero{
+	margin-top: 20vh;
+}
+.hero .container{
+	display: flex;
+	flex-direction: column;
+	width: 90vw;
+	margin:0 auto;
+	text-align: center;
+	align-items: center;
+}
+.hero h1{
+
+	text-transform: uppercase;
+	color: #f5f0ed;
+	font-weight: bold;
+	font-size: 30px;
+}
+.line{
+	margin: 10px 0;
+	border: 1px solid #fff;
+	height: 1px;
+	width: 100px
+}
+.hero p{
+	color: #f5f0ed;
+}
+/*Estilos seccion de informacion*/
+
+
+.info .super-container .container{
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	min-height: 50vh;
+	text-align: center;
+}
+.info .super-container .container:nth-child(1) {
+	background-color: #d03b40;
+	color: #ded6c0;
+}
+.info .super-container .container:nth-child(2) {
+	background-color: #ded6c0;
+	color: #d03b40;
+}
+.info .super-container .container h3{
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 5vh;
+}
+/*Estilos de productos*/
+#products{
+	display: flex;
+	align-items: center;
+	min-height: 70vh;
+	background-image: url('img/Fondo2.jpg');
+	background-size: cover;
+}
+#products .container{
+	text-align: center;
+	display: inherit;
+	flex-direction: column;
+	align-items: center;
+}
+#products .container h2{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 28px;
+	font-weight: bold;
+}
+#products .container .line{
+	margin: 30px 0;
+}
+#products .container p{
+	color: #f5f0ed;
+}
+.button-products{
+	font-size: 14px;
+	margin-top: 5vh;
+	border: 2px solid #f5f0ed;
+	padding: 10px;
+}
+/*Estilos de ingredientes*/
+.ingredients .super-container{
+	background-color: #f5f0ed;
+	padding: 0 50px;
+	padding-bottom: 50px;
+}
+.ingredients .super-container .container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ingredients .super-container .container .card{
+	margin-top: 50px;
+}
+.container-img-ingredients{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5vh;
+}
+.container-img-ingredients img{
+	max-height: 20vh;
+}
+.ingredients h3{
+	text-transform: uppercase;
+	color: #3c3c3b;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 2vh;
+}
+.ingredients p{
+	color: #3c3c3b;
+	line-height: 4vh;
+}
+/*Estilos para contacto*/
+
+#contact .super-container .container{
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	min-height: 50vh;
+	text-align: center;
+}
+#contact .super-container .container:nth-child(1) {
+	background-color: #d03b40;
+	color: #ded6c0;
+}
+#contact .super-container .container:nth-child(2) {
+	background-color: #ded6c0;
+	color: #d03b40;
+}
+#contact .super-container .container h2{
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 5vh;
+}
+footer{
+	height:20vh;
+}
+footer .container{
+	padding-left: 5vw;
+	color: #ded6c0;
+	display: flex;
+	background-color: #000;
+	height: inherit;
+	align-items: center;
+}
+
+/*Media querys*/
+
+@media screen and (min-width: 768px){
+	.ingredients .super-container{
+		display: grid;
+		grid-template-rows: repeat(2,1fr);
+		grid-template-columns: repeat(2,1fr);
+	}
+	.info .super-container{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		 
+	}
+	#contact .super-container{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+	#button-menu{
+		display: none;
+	}
+	.navigation{
+		overflow: visible;
+		max-height: fit-content;
+		background-color: transparent;
+		position: static;
+
+	}
+	.navigation .menu ul{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+	}
+	.navigation .menu ul li{
+		width: auto;
+		border:none;
+	}
+}
